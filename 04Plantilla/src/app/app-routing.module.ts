@@ -101,7 +101,13 @@ const routes: Routes = [
       },
       {
         path: 'nuevoproducto',
-        loadComponent: () => import('./productos/nuevoproducto/nuevoproducto.component').then((m) => m.NuevoproductoComponent),
+        loadComponent: () =>
+          import('./productos/nuevoproducto/nuevoproducto.component').then((m) => m.NuevoproductoComponent),
+        canActivate: [usuariosGuardGuard]
+      },
+      {
+        path: 'actualizarproducto',
+        loadComponent: () => import('./productos/actualizarproducto/actualizarproducto.component').then((m) => m.EditarProductoComponent),
         canActivate: [usuariosGuardGuard]
       },
       {

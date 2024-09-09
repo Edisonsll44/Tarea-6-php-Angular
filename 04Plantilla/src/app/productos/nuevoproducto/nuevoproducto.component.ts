@@ -28,7 +28,7 @@ export class NuevoproductoComponent implements OnInit {
     private fb: FormBuilder,
     private proveedoreServicio: ProveedorService,
     private ivaServicio: IvaService,
-    private productoServicio: ProductoService // Inyecta el servicio de productos
+    private productoServicio: ProductoService
   ) {}
 
   ngOnInit(): void {
