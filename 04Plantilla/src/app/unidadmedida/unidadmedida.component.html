@@ -33,15 +33,17 @@
 
                     <td>
                       <button
-                        type="button"
-                        class="btn btn-outline-success"
-                        [routerLink]="['/editarunidadmedida/', unidadmedida.idUnidad_Medida]"
-                      >
-                        Editar
-                      </button>
-                      <button (click)="eliminar(unidadmedida.idUnidad_Medida)" type="button" class="btn btn-outline-danger">
-                        Eliminar
-                      </button>
+                      type="button"
+                      class="btn btn-outline-success"
+                      [routerLink]="['/editarunidadmedida', unidadmedida.idUnidad_Medida]"
+                    >
+                      Editar
+                    </button>
+                    <button
+                      (click)="eliminar(unidadmedida.idUnidad_Medida)"
+                      type="button"
+                      class="btn btn-outline-danger"
+                    >
                     </td>
                   </tr>
                 }
