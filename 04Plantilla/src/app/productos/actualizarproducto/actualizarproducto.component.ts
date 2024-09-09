@@ -72,7 +72,8 @@ export class EditarProductoComponent implements OnInit {
 
   grabar() {
     if (this.frm_Producto.valid) {
-      this.productoServicio.actualizar(this.productoId, this.frm_Producto.value).subscribe(() => {
+      const producto: IProducto = { ...this.frm_Producto.value, idProductos: this.productoId };
+      this.productoServicio.actualizar(producto).subscribe(() => {
         Swal.fire('Actualizado', 'El producto ha sido actualizado', 'success').then(() => {
           this.router.navigate(['/productos']);
         });
